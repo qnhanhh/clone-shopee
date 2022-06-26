@@ -86,7 +86,6 @@
   animation: fadeIn ease-in 0.3s;
 }
 
-.header__noti::before,
 .header__qr::before {
   content: "";
   display: block;
@@ -137,7 +136,30 @@
   cursor: default;
   transform-origin:calc(100% - 20px) top;
   animation: growStretch ease-in 0.2s;
+  will-change: opacity, transform;
   display: none;
+}
+
+.header__noti::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom-color: var(--white-color);
+  border-top: 0;
+  top: -8px;
+  left: 87%;
+}
+
+.header__noti::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  right: 0;
+  top: -10px;
 }
 
 @keyframes growStretch{
