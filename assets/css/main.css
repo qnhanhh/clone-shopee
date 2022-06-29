@@ -1231,3 +1231,6 @@
   color: var(--white-color);
 }
 
+.products__pagination{
+  margin: 48px 0 32px 0;
+}
