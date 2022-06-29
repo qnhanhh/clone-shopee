@@ -26,7 +26,7 @@ html {
 
 /* Responsive */
 .grid {
-  width: 93%;
+  width: 1200px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -38,8 +38,22 @@ html {
 .grid__row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
+/* Temporary responsive */
+.grid__col-2{
+  padding-left: 12px;
+  padding-right: 12px;
+  width: calc(100% / 6);
+}
+
+.grid__col-10{
+  padding-left: 12px;
+  padding-right: 12px;
+  width: calc(100% * 5 / 6);
+}
 
 /* Animation */
 @keyframes fadeIn {
@@ -100,9 +114,10 @@ html {
   outline: none;
   cursor: pointer;
   color: var(--text-color);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--white-color);
 }
 
 .btn.btn--normal:hover {
