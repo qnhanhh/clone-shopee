@@ -43,7 +43,7 @@
 .user-menu{
   position: absolute;
   z-index: 1;
-  padding-left: 0;
+  padding: 5px 0 0 0;
   top: calc(100% + 3px);
   right: 0;
   width: 160px;
@@ -163,6 +163,7 @@
   color: var(--white-color);
   cursor: text;
 }
+
 /* Header QR code */
 .header__qr {
   background-color: var(--white-color);
@@ -174,6 +175,8 @@
   border-radius: 2px;
   display: none;
   animation: fadeIn ease-in 0.3s;
+  z-index: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .header__qr::before {
@@ -228,20 +231,21 @@
   animation: growStretch ease-in 0.2s;
   will-change: opacity, transform;
   display: none;
-  z-index: 1;
+  z-index: 2;
   border-radius: 2px;
 }
 
 .header__noti::before {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
-  border: 20px solid transparent;
-  border-bottom-color: var(--white-color);
-  border-top: 0;
   top: -8px;
   left: 87%;
+  width: 0;
+  height: 0;
+  border-width: 16px 20px;
+  border-style: solid;
+  border-top: 0;
+  border-color: transparent transparent var(--white-color) transparent;
 }
 
 .header__noti::after {
@@ -515,6 +519,7 @@
   box-shadow: 0 1px 5px rgb(189, 189, 189);
   overflow: hidden;
   display: none;
+  z-index: 1;
 }
 
 .history-heading{
@@ -580,6 +585,7 @@
   border-radius: 2px;
   display: none;
   animation: fadeIn ease-in 0.2s;
+  z-index: 1;
 }
 
 .search-bar__option::before{
@@ -695,6 +701,7 @@
   display: none;
   animation: fadeIn ease-in 0.2s;
   cursor: default;
+  z-index: 1;
 }
 
 .header__cart-list::before{
@@ -743,6 +750,8 @@
 .header__cart-items{
   padding-left: 0;
   list-style: none;
+  height: 50vh;
+  overflow-y: auto;
 }
 
 .header__cart-item{
@@ -777,6 +786,13 @@
   font-weight: 500;
   color: var(--text-color);
   margin: 0;
+  display: block;
+  width: 196px;
+  text-align: left;
+  margin-right: 16px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .item__info-price{
@@ -848,6 +864,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: 6px;
   margin-top: 0;
+  text-transform: uppercase;
 }
 
 .category__heading-icon{
@@ -861,6 +878,19 @@
   padding:0 0 8px 0;
   list-style: none;
   margin-left: 10px;
+}
+
+.category-item{
+  position: relative;
+}
+
+.category-item::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 16px;
+  border-top: 1px solid #e1e1e1;
 }
 
 .category-item--active
@@ -886,13 +916,11 @@
   text-decoration: none;
   color: var(--text-color);
   display: block;
-  padding: 6px 16px;
-  transition: right linear 0.1s;
+  padding: 8px 16px;
 }
 
 .item__link:hover{
   color: var(--primary-color);
-  right: -4px;
 }
 
 /* Product sort + filter */
@@ -952,6 +980,7 @@
   background-color: var(--white-color);
   list-style: none;
   display: none;
+  z-index: 1;
 }
 
 .filter__select-link{
@@ -1028,7 +1057,7 @@
   background-color: var(--white-color);
   margin-top: 10px;
   position: relative;
-  border-radius: 0 0 2px 2px;
+  border-radius: 2px;
   box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.1);
   transition: transform ease-in 0.1s;
   will-change: transform;
@@ -1044,6 +1073,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  border-radius: 2px 2px 0 0;
 }
 
 .product-item__name{
@@ -1174,6 +1204,7 @@
   background-color: currentColor;
   text-align: center;
   padding-top: 4px;
+  border-top-right-radius: 2px;
 }
 
 .product-item__discount::before{
