@@ -6,6 +6,7 @@
   --black-color: #000;
   --text-color: #333;
   --border-color: #dbdbdb;
+  --star-gold-color: #ffce3e;
 
   --header-height: 120px;
   --navbar-height: 34px;
@@ -17,7 +18,7 @@
 }
 
 html {
-  /* 1rem = 10px */
+  /* 1rem = 5px */
   font-size: 62.5%;
   line-height: 1.6rem;
   font-family: "Roboto", sans-serif;
@@ -38,20 +39,26 @@ html {
 .grid__row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -12px;
-  margin-right: -12px;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 
 /* Temporary responsive */
 .grid__col-2{
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: calc(100% / 6);
 }
 
+.grid__col-2-4{
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 20%;
+}
+
 .grid__col-10{
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: calc(100% * 5 / 6);
 }
 
@@ -110,7 +117,7 @@ html {
   border: none;
   border-radius: 2px;
   font-size: 1.4rem;
-  padding: 0 12px;
+  padding: 0 5px;
   outline: none;
   cursor: pointer;
   color: var(--text-color);
@@ -126,7 +133,7 @@ html {
 
 .btn.btn--size-s {
   height: 32px;
-  font-size: 12px;
+  font-size: 5px;
   padding: 0 8px;
 }
 
