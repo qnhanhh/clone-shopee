@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      href ="https://fonts.googleapis.scom/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -249,6 +249,10 @@
 
           <!-- Search section -->
           <div class="header__search">
+            <label for="mobile-search-checkbox" class="header__mobile-search">
+              <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+            </label>
+
             <div class="header__logo hide-on-tablet">
               <a href="/" class="header__logo-link">
                 <svg class="header__logo-img" viewBox="0 0 192 65">
@@ -262,7 +266,7 @@
               </a>
             </div>
 
-            <div class="header__search-bar">
+            <div class="header__search-bar hide-on-mobile">
               <div class="search-bar__input-wrap">
                 <input
                   type="text"

@@ -45,4 +45,12 @@
   .hide-on-mobile {
     display: none;
   }
+  .header__search{
+    justify-content: space-between;
+  }
+  .header__logo,
+  .header__cart{
+    width: unset;
+  }
+
 }
