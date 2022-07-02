@@ -26,6 +26,9 @@ html {
   box-sizing: border-box;
 }
 
+a{
+  -webkit-tap-highlight-color: transparent;
+}
 /* Responsive */
 .grid__row {
   display: flex;
